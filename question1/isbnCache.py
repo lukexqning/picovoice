@@ -21,7 +21,7 @@ def get_book_info(isbn):
 
 
 def get_book_info_wrapper(isbn):
-    idx = isbnCache[isbn]
+    idx = isbnCache.get(isbn)
     # if we've stored the isbn already, we return the stored data
     if idx:
         _, title, author, language = bookDataCache[idx]
